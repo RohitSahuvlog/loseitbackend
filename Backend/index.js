@@ -21,6 +21,10 @@ app.use(cors());
 
 app.use("/", userRoutes);
 
+app.get("/", (req,res)=>{
+  res.send("Backend link add")
+});
+
 app.post("/signup", SignUpControl);
 
 app.post("/login", loginControl);
